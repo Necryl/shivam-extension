@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Vocabulary Flashcards",
+  "version": "1.0",
+  "description": "A Chrome extension that helps you learn vocabulary words.",
+  "action": {
+    "default_popup": "/src/popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["contentscript.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ]
+}
